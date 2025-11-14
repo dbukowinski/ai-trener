@@ -3,7 +3,9 @@ class AITrainer {
         this.messagesContainer = document.getElementById('chatMessages');
         this.messageInput = document.getElementById('messageInput');
         this.sendButton = document.getElementById('sendButton');
-        this.ragSystem = new RAGSystem(); // Nowy system RAG
+        this.ragSystem = new RAGSystem();
+        this.realAI = new RealAIIntegration(); // Nowe AI
+        this.conversationHistory = []; // Historia rozmowy
         this.userProfile = {
             goal: null,
             level: null,
@@ -19,84 +21,98 @@ class AITrainer {
             if (e.key === 'Enter') this.sendMessage();
         });
         
-        // Pokaż statystyki bazy wiedzy w konsoli
-        console.log('📚 RAG System załadowany:', this.ragSystem.getStats());
+        // Załaduj zapisane klucze API
+        this.realAI.loadStoredKeys();
+        
+        // Dodaj przycisk ustawień
+        this.addSettingsButton();
+        
+        console.log('🤖 Real AI Integration loaded');
+    }
+    
+    addSettingsButton() {
+        const header = document.querySelector('.trainer-info');
+        const settingsBtn = document.createElement('button');
+        settingsBtn.innerHTML = '⚙️';
+        settingsBtn.className = 'settings-btn';
+        settingsBtn.onclick = () => this.showSettings();
+        header.appendChild(settingsBtn);
+    }
+    
+    showSettings() {
+        const modal = document.createElement('div');
+        modal.className = 'settings-modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <h3>⚙️ Ustawienia AI</h3>
+                <label>🚀 Groq API Key (darmowy):</label>
+                <input type="password" id="groqKey" placeholder="Wklej klucz z console.groq.com">
+                
+                <label>🧠 Gemini API Key (backup):</label>
+                <input type="password" id="geminiKey" placeholder="Opcjonalnie - z aistudio.google.com">
+                
+                <div class="modal-buttons">
+                    <button onclick="this.closest('.settings-modal').remove()">Anuluj</button>
+                    <button onclick="window.trainer.saveSettings()">Zapisz</button>
+                </div>
+                
+                <p style="font-size: 12px; color: #666;">
+                    💡 Klucze są zapisane lokalnie w przeglądarce
+                </p>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+    }
+    
+    saveSettings() {
+        const groqKey = document.getElementById('groqKey').value;
+        const geminiKey = document.getElementById('geminiKey').value;
+        
+        if (groqKey) this.realAI.setGroqKey(groqKey);
+        if (geminiKey) this.realAI.setGeminiKey(geminiKey);
+        
+        document.querySelector('.settings-modal').remove();
+        this.addMessage('✅ Ustawienia zapisane! Teraz używam prawdziwego AI! 🤖', 'bot');
     }
     
     async sendMessage() {
         const message = this.messageInput.value.trim();
         if (!message) return;
         
-        this.addMessage(this.messageInput.value, 'user');
+        this.addMessage(message, 'user');
         this.messageInput.value = '';
         this.setLoading(true);
         
-        setTimeout(() => {
-            // Najpierw spróbuj RAG
-            const ragResponse = this.ragSystem.generateRAGResponse(message);
+        try {
+            // Wywołaj prawdziwe AI z historią rozmowy
+            const aiResponse = await this.realAI.generateResponse(
+                message, 
+                this.conversationHistory.slice(-6), // Ostatnie 6 wiadomości
+                this.ragSystem
+            );
             
-            let finalResponse;
-            if (ragResponse.confidence > 2) {
-                // Wysoka pewność - użyj odpowiedzi RAG
-                finalResponse = ragResponse.answer + 
-                    `<br><div style="font-size: 11px; color: #666; margin-top: 10px;">
-                    🎯 Pewność odpowiedzi: ${Math.min(ragResponse.confidence * 20, 100)}%
-                    </div>`;
-            } else {
-                // Niska pewność - użyj standardowej logiki + RAG jako dodatek
-                const standardResponse = this.generateStandardResponse(message.toLowerCase());
-                const ragInfo = ragResponse.sources.length > 0 ? 
-                    `<br><br><strong>📚 Dodatkowo z bazy wiedzy:</strong><br>${ragResponse.sources[0].content}` : '';
-                
-                finalResponse = standardResponse + ragInfo;
-            }
+            // Dodaj do historii
+            this.conversationHistory.push(
+                { role: "user", content: message },
+                { role: "assistant", content: aiResponse.message }
+            );
             
-            this.addMessage(finalResponse, 'bot');
-            this.setLoading(false);
-        }, 800 + Math.random() * 1000);
-    }
-    
-    // Zmienione z generateResponse na generateStandardResponse
-    generateStandardResponse(message) {
-        // Twoja poprzednia logika generateResponse...
-        if (this.containsWords(message, ['cześć', 'hej', 'witaj', 'siema'])) {
-            return this.getRandomResponse(responses.greetings) + " W czym mogę pomóc?";
+            // Pokaż odpowiedź z info o źródle
+            const finalMessage = aiResponse.message + 
+                `<div class="ai-source">🤖 ${aiResponse.provider} (${aiResponse.model})</div>`;
+            
+            this.addMessage(finalMessage, 'bot');
+            
+        } catch (error) {
+            console.error('AI Error:', error);
+            this.addMessage('⚠️ Wystąpił błąd. Sprawdź połączenie i spróbuj ponownie.', 'bot');
         }
         
-        if (this.containsWords(message, ['schudnąć', 'schudnięcie', 'odchudzanie', 'waga'])) {
-            return this.getGoalAdvice('schudnąć');
-        }
-        
-        // ... reszta logiki
-        
-        return this.getRandomResponse(responses.unknown);
+        this.setLoading(false);
     }
     
-    // Nowa funkcja dla eksploracji bazy wiedzy
-    exploreKnowledge(category) {
-        const knowledge = this.ragSystem.searchByCategory(category, 3);
-        if (knowledge.length === 0) {
-            return "Nie mam jeszcze informacji w tej kategorii.";
-        }
-        
-        let response = `<strong>📚 Wiedza z kategorii: ${category}</strong><br><br>`;
-        knowledge.forEach((item, index) => {
-            response += `<strong>${index + 1}. ${item.title}</strong><br>`;
-            response += `${item.content}<br><br>`;
-        });
-        
-        return response;
-    }
-    
-    // Reszta kodu pozostaje bez zmian...
-    containsWords(text, words) {
-        return words.some(word => text.includes(word));
-    }
-    
-    getRandomResponse(responses) {
-        return responses[Math.floor(Math.random() * responses.length)];
-    }
-    
+    // Reszta kodu bez zmian...
     addMessage(text, sender) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${sender}-message`;
@@ -109,48 +125,12 @@ class AITrainer {
     setLoading(isLoading) {
         this.sendButton.disabled = isLoading;
         if (isLoading) {
-            this.addMessage("🧠 Przeszukuję bazę wiedzy...", 'bot loading');
+            this.addMessage("🧠 AI Coach myśli...", 'bot loading');
         } else {
             const loadingMsg = document.querySelector('.loading');
             if (loadingMsg) loadingMsg.remove();
         }
     }
-    
-    // Pozostałe metody bez zmian...
-}
-
-// Dodaj nowy przycisk do quick actions
-function quickAction(action) {
-    const trainer = window.trainer;
-    let response = '';
-    
-    switch(action) {
-        case 'plan':
-            response = trainer.getWorkoutPlan();
-            break;
-        case 'dieta':
-            response = trainer.getNutritionAdvice();
-            break;
-        case 'motywacja':
-            response = trainer.getMotivation();
-            break;
-        case 'cwiczenia':
-            response = trainer.exploreKnowledge('ćwiczenia_klatka');
-            break;
-        case 'baza':
-            const stats = trainer.ragSystem.getStats();
-            response = `<strong>📊 Statystyki bazy wiedzy:</strong><br><br>
-                       📚 Łącznie: ${stats.totalItems} elementów<br>
-                       📂 Kategorii: ${stats.categories}<br>
-                       📈 Poziomy: ${stats.difficulties.join(', ')}<br><br>
-                       <strong>Kategorie:</strong><br>
-                       ${stats.categoriesBreakdown.map(cat => 
-                           `• ${cat.name}: ${cat.count} elementów`
-                       ).join('<br>')}`;
-            break;
-    }
-    
-    trainer.addMessage(response, 'bot');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
