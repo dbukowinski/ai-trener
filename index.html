@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💪 AI Trener - Twój Personalny Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="trainer-avatar">💪</div>
+            <div class="trainer-info">
+                <h2>AI Coach Mike</h2>
+                <p class="status">🟢 Dostępny 24/7</p>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="action-btn" onclick="quickAction('plan')">📋 Plan Treningowy</button>
+            <button class="action-btn" onclick="quickAction('dieta')">🥗 Dieta</button>
+            <button class="action-btn" onclick="quickAction('motywacja')">🔥 Motywacja</button>
+            <button class="action-btn" onclick="quickAction('cwiczenia')">🏋️ Ćwiczenia</button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <strong>Cześć! Jestem Twoim AI Trenerem! 💪</strong><br>
+                Pomogę Ci osiągnąć cele fitness. Powiedz mi:
+                <ul>
+                    <li>Jaki jest Twój cel? (schudnąć, przybrać masy, wzmocnić się)</li>
+                    <li>Ile masz czasu na trening?</li>
+                    <li>Jaki jest Twój poziom zaawansowania?</li>
+                </ul>
+                Lub wybierz jedną z opcji powyżej! 🚀
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Opisz swój cel lub zadaj pytanie..." maxlength="500">
+                <button id="sendButton">
+                    <span class="send-icon">➤</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="trainer-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
