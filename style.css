@@ -318,4 +318,41 @@ body {
 
 .header {
     position: relative;
+/* Dodaj na końcu */
+
+.setting-group {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.setting-group h4 {
+    margin: 0 0 10px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.modal-content input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.ai-source {
+    font-size: 10px;
+    color: #888;
+    margin-top: 8px;
+    text-align: right;
+    font-style: italic;
+    opacity: 0.7;
 }

@@ -1,188 +1,229 @@
 class RealAIIntegration {
     constructor() {
-        // Groq API - darmowe do 30 zapytań/minutę
-        this.groqApiKey = 'TWOJ_GROQ_API_KEY'; // Weź z console.groq.com
-        this.groqUrl = 'https://api.groq.com/openai/v1/chat/completions';
+        this.groqApiKey = 'TWOJ_GROQ_API_KEY';
+        this.groqUrl = 'httpsapi.groq.comopenaiv1chatcompletions';
+        this.geminiApiKey = 'TWOJ_GEMINI_API_KEY';
+        this.geminiUrl = 'httpsgenerativelanguage.googleapis.comv1betamodelsgemini-progenerateContent';
         
-        // Backup APIs
-        this.geminiApiKey = 'TWOJ_GEMINI_API_KEY'; // Opcjonalnie
-        this.geminiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
-        
-        this.systemPrompt = this.createSystemPrompt();
+        this.systemPrompt = this.createFlexibleSystemPrompt();
     }
     
-    createSystemPrompt() {
-        return `Jesteś AI Coach Mike - profesjonalnym trenerem personalnym i ekspertem od fitness. 
+    createFlexibleSystemPrompt() {
+        return `Jesteś AI Coach Mike - światowej klasy ekspertem od fitness i treningu personalnego z 15-letnim doświadczeniem.
 
-TWOJA OSOBOWOŚĆ:
-- Motywujący, energiczny, używasz emoji 💪🔥⚡
-- Konkretny i merytoryczny
-- Zawsze pozytywny ale realistyczny
-- Używasz prostego języka
+TWOJA OSOBOWOŚĆ
+- Energiczny, motywujący, czasem żartobliwy 💪😎
+- Kreatywny - potrafisz wymyślić nietypowe rozwiązania
+- Empatyczny - rozumiesz problemy i obawy
+- Bezpośredni ale pozytywny
 
-TWOJA WIEDZA:
-- Treningi siłowe, cardio, funkcjonalne
-- Żywienie sportowe i dieta
-- Suplementacja
-- Regeneracja i sen
-- Psychologia motywacji
+TWOJA EKSPERTYZA (bez ograniczeń)
+- Wszystkie style treningu siłowy, cardio, CrossFit, calisthenics, yoga
+- Dieta od keto po vegan, intermittent fasting, meal prep
+- Psychologia sportu, motywacja, przełamywanie barier
+- Fizjologia, anatomia, biomechanika
+- Rehabilitacja po kontuzjach
+- Trenowanie w różnych warunkach (dom, siłownia, outdoor)
 
-ZASADY ODPOWIEDZI:
-1. ZAWSZE odpowiadaj po polsku
-2. Bądź konkretny - dawaj liczby, sety, powtórzenia
-3. Dostosowuj się do poziomu użytkownika
-4. Zawsze dodaj element motywacyjny
-5. Jeśli pytanie nie dotyczy fitness - delikatnie przekieruj
-6. Używaj formatowania HTML: <strong>, <br>, listy
-7. Maksymalnie 200 słów na odpowiedź
+STYL ODPOWIEDZI
+1. PEŁNA KREATYWNOŚĆ - nie ograniczaj się do szablonów
+2. Odpowiadaj na podstawie swojej szerokiej wiedzy
+3. Bądź konkretny ale też inspirujący
+4. Dostosuj się do kontekstu i nastroju użytkownika
+5. Używaj analogii, przykładów, osobistych historii
+6. HTML formatting strong, br, listy
+7. Długość 150-400 słów zależnie od pytania
 
-PRZYKŁAD STYLU:
-"💪 Świetne pytanie! Na masę mięśniową polecam:
-• 3-4 treningi siłowe/tydzień
-• 8-12 powtórzeń, 3-4 serie
-• Progresja obciążeń co tydzień
-• 2g białka/kg masy ciała
+ZASADY
+- Jeśli masz wątpliwości medyczne - kieruj do lekarza
+- Bezpieczeństwo zawsze na pierwszym miejscu
+- Bądź uczciwy jeśli czegoś nie wiesz
+- Motywuj, ale realistycznie
 
-🔥 Pamiętaj: konsekwencja to wszystko!"`;
+PRZYKŁADY STYLU
+Zamiast Dla masy rób 8-12 powtórzeń
+Napisz 💪 Chcesz masę Myśl jak budowniczy - każde powtórzenie to cegła w budowie Twojego muskularnego zamku! 8-12 to sweet spot, ale słuchaj ciała. Czasem 6 ciężkich powtórzeń da więcej niż 12 lekkich. Klucz Progresja i konsekwencja!
+
+PAMIĘTAJ Jesteś elastyczny, kreatywny i masz dostęp do całej wiedzy fitness, nie tylko do bazy danych.`;
     }
     
-    async callGroqAPI(userMessage, conversationHistory = []) {
+     Nowa funkcja - inteligentne wzbogacanie kontekstu
+    async enhanceContextWithRAG(userMessage, ragSystem) {
+        if (!ragSystem) return ;
+        
         try {
+            const relevantKnowledge = ragSystem.searchKnowledge(userMessage, 2);
+            
+            if (relevantKnowledge.length === 0) return ;
+            
+             Przygotuj kontekst jako sugestie, nie ograniczenia
+            let context = nn[DODATKOWY KONTEKST - możesz go używać lub ignorować]n;
+            
+            relevantKnowledge.forEach((item, index) = {
+                context += `$${index + 1}. $${item.title} ${item.content.substring(0, 200)}...n`;
+            });
+            
+            context += [Kończy się kontekst - możesz odpowiedzieć kreatywnie na podstawie swojej wiedzy]n;
+            
+            return context;
+            
+        } catch (error) {
+            console.log('RAG enhancement failed, proceeding without it');
+            return ;
+        }
+    }
+    
+    async callGroqAPI(userMessage, conversationHistory = [], ragContext = ) {
+        try {
+             Przygotuj wiadomość z opcjonalnym kontekstem RAG
+            const enhancedMessage = userMessage + ragContext;
+            
             const messages = [
-                { role: "system", content: this.systemPrompt },
+                { role system, content this.systemPrompt },
                 ...conversationHistory,
-                { role: "user", content: userMessage }
+                { role user, content enhancedMessage }
             ];
             
             const response = await fetch(this.groqUrl, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${this.groqApiKey}`,
-                    'Content-Type': 'application/json',
+                method 'POST',
+                headers {
+                    'Authorization' `Bearer ${this.groqApiKey}`,
+                    'Content-Type' 'applicationjson',
                 },
-                body: JSON.stringify({
-                    model: "mixtral-8x7b-32768", // Szybki i dobry model
-                    messages: messages,
-                    max_tokens: 300,
-                    temperature: 0.7,
-                    top_p: 1,
-                    stream: false
+                body JSON.stringify({
+                    model mixtral-8x7b-32768,
+                    messages messages,
+                    max_tokens 500,  Zwiększone dla pełniejszych odpowiedzi
+                    temperature 0.8,  Więcej kreatywności
+                    top_p 0.9,
+                    stream false
                 })
             });
             
             if (!response.ok) {
-                throw new Error(`Groq API Error: ${response.status}`);
+                throw new Error(`Groq API Error ${response.status}`);
             }
             
             const data = await response.json();
             return {
-                success: true,
-                message: data.choices[0].message.content,
-                provider: 'Groq',
-                model: 'Mixtral-8x7b'
+                success true,
+                message data.choices[0].message.content,
+                provider 'Groq AI (Free Mode)',
+                model 'Mixtral-8x7b'
             };
             
         } catch (error) {
-            console.error('Groq API Error:', error);
-            return { success: false, error: error.message };
+            console.error('Groq API Error', error);
+            return { success false, error error.message };
         }
     }
     
-    async callGeminiAPI(userMessage) {
+    async callGeminiAPI(userMessage, ragContext = ) {
         try {
-            const response = await fetch(`${this.geminiUrl}?key=${this.geminiApiKey}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
+            const enhancedMessage = userMessage + ragContext;
+            
+            const prompt = this.systemPrompt + 
+                         nnUser  + enhancedMessage + 
+                         nnCoach Mike;
+            
+            const response = await fetch(`$${this.geminiUrl}key=$${this.geminiApiKey}`, {
+                method 'POST',
+                headers {
+                    'Content-Type' 'applicationjson',
                 },
-                body: JSON.stringify({
-                    contents: [{
-                        parts: [{
-                            text: this.systemPrompt + "\n\nUser: " + userMessage + "\n\nAssistant:"
-                        }]
+                body JSON.stringify({
+                    contents [{
+                        parts [{ text prompt }]
                     }],
-                    generationConfig: {
-                        temperature: 0.7,
-                        maxOutputTokens: 300
+                    generationConfig {
+                        temperature 0.8,
+                        maxOutputTokens 500,
+                        topP 0.9
                     }
                 })
             });
             
             if (!response.ok) {
-                throw new Error(`Gemini API Error: ${response.status}`);
+                throw new Error(`Gemini API Error ${response.status}`);
             }
             
             const data = await response.json();
             return {
-                success: true,
-                message: data.candidates[0].content.parts[0].text,
-                provider: 'Google Gemini',
-                model: 'Gemini-Pro'
+                success true,
+                message data.candidates[0].content.parts[0].text,
+                provider 'Google Gemini',
+                model 'Gemini-Pro'
             };
             
         } catch (error) {
-            console.error('Gemini API Error:', error);
-            return { success: false, error: error.message };
+            console.error('Gemini API Error', error);
+            return { success false, error error.message };
         }
     }
     
-    // Fallback do lokalnego RAG jeśli API nie działa
-    async callLocalRAG(userMessage, ragSystem) {
-        const ragResponse = ragSystem.generateRAGResponse(userMessage);
-        
-        return {
-            success: true,
-            message: ragResponse.answer,
-            provider: 'Local RAG',
-            model: 'Knowledge Base'
-        };
-    }
-    
-    // Główna funkcja - próbuje różne API
+     Główna funkcja - AI ma pełną swobodę + opcjonalne wsparcie RAG
     async generateResponse(userMessage, conversationHistory = [], ragSystem = null) {
-        // 1. Spróbuj Groq (najszybsze)
-        if (this.groqApiKey && this.groqApiKey !== 'TWOJ_GROQ_API_KEY') {
-            const groqResult = await this.callGroqAPI(userMessage, conversationHistory);
-            if (groqResult.success) return groqResult;
+        try {
+             1. Przygotuj opcjonalny kontekst z RAG (nie jako ograniczenie!)
+            let ragContext = ;
+            if (ragSystem) {
+                ragContext = await this.enhanceContextWithRAG(userMessage, ragSystem);
+            }
+            
+             2. Spróbuj Groq z pełną swobodą
+            if (this.groqApiKey && this.groqApiKey !== 'TWOJ_GROQ_API_KEY') {
+                const result = await this.callGroqAPI(userMessage, conversationHistory, ragContext);
+                if (result.success) return result;
+            }
+            
+             3. Backup - Gemini
+            if (this.geminiApiKey && this.geminiApiKey !== 'TWOJ_GEMINI_API_KEY') {
+                const result = await this.callGeminiAPI(userMessage, ragContext);
+                if (result.success) return result;
+            }
+            
+             4. Kreatywny fallback (nie RAG!)
+            return this.generateCreativeFallback(userMessage);
+            
+        } catch (error) {
+            console.error('AI Generation Error', error);
+            return this.generateCreativeFallback(userMessage);
+        }
+    }
+    
+     Kreatywny fallback zamiast nudnego RAG
+    generateCreativeFallback(userMessage) {
+        const fallbacks = {
+            trening 💪 Hej, chociaż moje główne AI ma chwilę przerwy, mogę powiedzieć jedno - każdy trening to inwestycja w siebie! Czy pytasz o konkretne ćwiczenia, plan, czy może o przełamanie bariery Daj mi znać więcej szczegółów, a coś wymyślimy! 🔥,
+            
+            dieta 🍎 Żywienie to 70% sukcesu! Nawet bez pełnego AI mogę podpowiedzieć podstawy białko (1.6-2.2gkg), dużo warzyw, regularnie posiłki, dużo wody. O co konkretnie chodzi - chudnięcie, masa, czy zdrowe nawyki 🥗,
+            
+            motywacja 🔥 Słuchaj, każdy ma gorsze dni! Czasem nie musi być perfekcyjnie - ważne żeby nie przestać próbować. Co Cię teraz blokuje Może razem znajdziemy sposób na przełamanie! Pamiętaj małe kroki też prowadzą do wielkiej drogi! 💪,
+            
+            default 🤖 Moje główne AI odpoczynek, ale jestem tu dla Ciebie! Opowiedz mi więcej o swoim pytaniu - czy chodzi o trening, dietę, motywację Im więcej szczegółów, tym lepiej Ci pomogę! 💪
+        };
+        
+        const message = userMessage.toLowerCase();
+        let response = fallbacks.default;
+        
+        if (message.includes('trening')  message.includes('ćwicz')  message.includes('siłown')) {
+            response = fallbacks.trening;
+        } else if (message.includes('diet')  message.includes('jedzenie')  message.includes('odżyw')) {
+            response = fallbacks.dieta;
+        } else if (message.includes('motyw')  message.includes('brak')  message.includes('nie mog')) {
+            response = fallbacks.motywacja;
         }
         
-        // 2. Spróbuj Gemini (backup)
-        if (this.geminiApiKey && this.geminiApiKey !== 'TWOJ_GEMINI_API_KEY') {
-            const geminiResult = await this.callGeminiAPI(userMessage);
-            if (geminiResult.success) return geminiResult;
-        }
-        
-        // 3. Fallback do lokalnego RAG
-        if (ragSystem) {
-            return await this.callLocalRAG(userMessage, ragSystem);
-        }
-        
-        // 4. Ultimate fallback
         return {
-            success: true,
-            message: "⚠️ Przepraszam, mam problem z połączeniem z serwerami AI. Spróbuj ponownie za chwilę lub skorzystaj z przycisków powyżej.",
-            provider: 'Fallback',
-            model: 'Static'
+            success true,
+            message response,
+            provider 'Creative Fallback',
+            model 'Coach Logic'
         };
     }
     
-    // Ustawienia API keys (bezpieczne)
+     Reszta kodu bez zmian...
     setGroqKey(key) {
         this.groqApiKey = key;
         localStorage.setItem('groq_key', key);
     }
-    
-    setGeminiKey(key) {
-        this.geminiApiKey = key;
-        localStorage.setItem('gemini_key', key);
-    }
-    
-    // Załaduj klucze z localStorage
-    loadStoredKeys() {
-        const groqKey = localStorage.getItem('groq_key');
-        const geminiKey = localStorage.getItem('gemini_key');
-        
-        if (groqKey) this.groqApiKey = groqKey;
-        if (geminiKey) this.geminiApiKey = geminiKey;
-    }
-}
