@@ -12,6 +12,8 @@ Dziękuję, że testujesz! Najcenniejsze są uwagi z prawdziwego użycia: co dzi
 
 ## Co sprawdzić
 
+- [ ] Czy ankietę dało się wygodnie przejść na telefonie (jedno pytanie naraz, odpowiedź cyfrą)?
+- [ ] Czy coś było niezrozumiałe (skróty, słowa fachowe, instrukcje techniczne)?
 - [ ] Czy ankieta była zrozumiała i nie za długa?
 - [ ] Czy propozycja metodologii pasowała do Twojego celu i życia? Czy AI zapytało o ulubionych trenerów?
 - [ ] Czy plan uwzględnił Twoje ograniczenia (dni, teren, sprzęt)?

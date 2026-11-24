@@ -222,7 +222,7 @@ Dopisuję, gdy użytkownik mnie poprawia, wniosek okazał się błędny lub prze
 3. Stosuję reguły i fakty w zadaniu.
 4. Hipotezę mogę **testować** (status `testowana`): max 1 eksperyment naraz na domenę, jedna zmienna, oznaczony („test H-sport-004”), nigdy przed ważnym terminem z profilu.
 
-**Format odpowiedzi** (gdy odpowiedź dotyczy wniosków z Pętli):
+**Format odpowiedzi** (gdy odpowiedź dotyczy wniosków z Pętli; w rozmowie z biegaczem po ludzku, bez identyfikatorów — wg `SKILL.md` §4):
 - **Widzimy w danych:** 1–3 fakty z `source_id`.
 - **Hipoteza / kontrhipoteza:** z niepewnością i sposobem sprawdzenia.
 - **Znaczenie dla planu/zadania:** mała, proporcjonalna decyzja albo uzasadnienie braku zmiany.

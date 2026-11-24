@@ -1,6 +1,6 @@
 ---
 type: ai-coach-start
-package_version: 0.2.0
+package_version: 0.3.0
 created: <YYYY-MM-DD>
 ---
 
@@ -33,6 +33,7 @@ This is your training project. The coach (AI) reads this file at the start of ev
 | Plan write mode | <ask / send> |
 | Plan horizon | <1 / 2 weeks> |
 | Units | <km / miles> |
+| Plan layout | <list for the phone / table> |
 | Communication style | <short / with explanations> |
 | Rhythm | <e.g. weekly review Sunday evening — scheduled task: yes / no> |
 

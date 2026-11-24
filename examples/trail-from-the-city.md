@@ -36,7 +36,21 @@ Shows what an installation result should look like. The data is made up.
 | Taper | 31.05–11.06 | volume down, intensity kept, no hard descents from 29.05 |
 | A race | 12.06.2027 | HR in the first half, eat by the clock |
 
-## First week (`Plans/2026-W49.md`) — calibration
+## First week — calibration
+
+**What Kate sees in the chat (phone):**
+
+> The first week is easy — I'm learning your pace.
+> Mon — rest (15 min of stretching if you like)
+> Tue — easy run 45 min (nose breathing) + 4 short accelerations
+> Wed — pace test: 10 min warm-up + 60 min at a steady pace on the treadmill
+> Thu — gym 50 min: squats, box step-ups, band-assisted pull-ups, side plank (light, with reps to spare)
+> Fri — rest
+> Sat — long run 1 h 40 min on hills, a snack every 30 min
+> Sun — building stairs 35 min: 6 times up to the 11th floor, lift down, easy
+> On your watch: the runs. The gym session is in your note.
+
+**Note `Plans/2026-W49.md` (with codes, for order):**
 
 | Day | Code | Session | Intensity | Time | Elevation | Substitute | Watch |
 |---|---|---|---|---|---|---|---|

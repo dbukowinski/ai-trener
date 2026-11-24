@@ -22,7 +22,20 @@
 
 Route to the watch: **intervals.icu** (free; "Upload planned workouts" ticked, type: Run) + the local `intervals-icu-mcp` MCP in Claude Desktop. The plan reaches Garmin Connect about a week ahead. Strength — in a note.
 
-## First week (`Plans/2026-W49.md`)
+## First week
+
+**What Mark sees in the chat (phone):**
+
+> Mon — home exercises 30 min
+> Tue — 15 min jog + 2 × 1.6 km "comfortably hard" (about 5:00/km), 1 min rest + 10 min jog
+> Wed — rest
+> Thu — easy run 40 min + 6 short accelerations
+> Fri — home exercises 30 min
+> Sat — easy run 40 min
+> Sun — long easy run 1 h 10 min
+> I've sent the runs to your watch.
+
+**Note `Plans/2026-W49.md` (with codes, for order):**
 
 | Day | Code | Session | Intensity | Time / distance | Watch |
 |---|---|---|---|---|---|

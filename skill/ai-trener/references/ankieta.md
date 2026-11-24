@@ -1,82 +1,64 @@
 # Ankieta biegacza
 
-Zasady prowadzenia:
-- Rundy po 3–6 pytań. Gdzie się da — odpowiedzi do wyboru + „inne”.
-- Pytaj tylko o to, czego potrzebujesz. Pytania oznaczone **[G]** zadajesz przy celu górskim/trailowym, **[A]** przy asfaltowym, **[S]** gdy biegacz chce siłowni.
-- Jeśli masz dostęp do platformy treningowej, część odpowiedzi (kilometraż, najdłuższy bieg, przewyższenia) odczytaj z danych i tylko poproś o potwierdzenie.
-- Wszystko, co biegacz poda, trafia do jego własnych plików. Przy pytaniach o zdrowie powiedz, że może odpowiedzieć ogólnie albo pominąć — ale pytania o objawy (runda 4, pkt 2) są potrzebne do bezpiecznego planu.
-- Biegacz poniżej 18 lat → `references/bezpieczenstwo.md` §4 (dorosły opiekun, bez redukcji masy ciała, inne zasady siłowni).
+Ankieta musi dać się przejść **na telefonie, w przerwie, przez kogoś, kto rzadko używa AI**. Dlatego najpierw krótka część podstawowa, a szczegóły dopiero wtedy, gdy są potrzebne.
 
-## Runda 1. Kim jesteś i skąd startujesz
+## Jak pytać (obowiązkowe)
 
-1. Jak mam się do Ciebie zwracać? Ile masz lat? (płeć, masa i wzrost — opcjonalnie; przydają się m.in. do obciążeń na siłowni i plecaka)
-2. Od ilu lat biegasz regularnie?
-3. Ile biegasz teraz: dni w tygodniu i godziny lub kilometry tygodniowo (średnio z ostatnich 4 tygodni)?
-4. Najdłuższy bieg w ostatnich 8 tygodniach (czas, dystans, przewyższenie)?
-5. Inne sporty teraz (rower, siłownia, narty, pływanie, sporty drużynowe)?
+1. **Jedno pytanie na wiadomość.** Wyjątek: dwa bardzo krótkie, ściśle związane (np. „Jak mam się do Ciebie zwracać i ile masz lat?”).
+2. **Wiadomość mieści się na ekranie telefonu:** najwyżej 1 zdanie wstępu + pytanie + odpowiedzi. Bez tabel, bez nagłówków, bez długich wyjaśnień.
+3. **Odpowiedzi numerowane** (1, 2, 3…), tak żeby wystarczyło odpisać cyfrą. Zawsze ostatnia opcja: „nie wiem / pomiń”.
+4. **Postęp** na początku pytania: „(3/10)”.
+5. **Zero skrótów i żargonu** (`references/slowniczek.md`). Zamiast „Z2 poniżej AeT” mów „spokojnie, tak że da się rozmawiać”. Termin fachowy tylko wtedy, gdy jest potrzebny — i za pierwszym razem z prostym wyjaśnieniem w nawiasie.
+6. **Narzędzie do pytań z klikanymi odpowiedziami** (jeśli je masz) — użyj go, jedno pytanie naraz.
+7. **Długa odpowiedź z wieloma informacjami** → wyciągnij wszystko i pomiń pytania, na które biegacz już odpowiedział (postęp przelicz).
+8. **Tempo pod biegacza:** jeśli sam pisze dużo i chce szybciej, możesz łączyć do 3 pytań; jeśli odpisuje jednym słowem — zostań przy jednym.
+9. **Pauza:** biegacz może napisać „pauza” albo „dokończmy później”. Zapisz odpowiedzi (plik lub podsumowanie w rozmowie) i powiedz jednym zdaniem, jak wrócić („napisz: wracamy do ankiety”).
+10. **Zdrowie:** jedno pytanie przesiewowe tak / nie (pytanie 8). Szczegóły tylko, jeśli biegacz chce je podać.
+11. Wszystko, co biegacz poda, trafia do jego własnych plików (`Profil biegacza.md`).
 
-## Runda 2. Cel
+Przykład dobrego pytania:
 
-1. Jaki jest główny cel?
-   - góry / trail / ultra / skyrunning **[G]**
-   - asfalt: 5 km, 10 km, półmaraton, maraton **[A]**
-   - jedno i drugie (który start jest ważniejszy?)
-   - bez startu: forma, zdrowie, redukcja masy ciała, powrót po przerwie
-2. Start docelowy: nazwa, data, dystans, przewyższenie, limit czasu, link do regulaminu / profilu trasy. Inne starty w sezonie (priorytet A / B / C).
-3. Cel wynikowy: ukończyć / czas / miejsce / „zrobić to zdrowo”.
-4. Wyniki z ostatnich 12 miesięcy (dystans, czas, data, trasa płaska czy górska).
+> (4/10) Ile mniej więcej biegasz teraz w tygodniu?
+> 1. mniej niż 2 godziny
+> 2. 2–4 godziny
+> 3. 4–6 godzin
+> 4. więcej niż 6 godzin
+> 5. nie wiem / pomiń
 
-**[G] Szczegóły startu górskiego:**
-5. Najdłuższe podejście i zbieg (m, nachylenie, jeśli wiesz), teren techniczny, wysokość n.p.m., upał.
-6. Kijki: tak / nie / nie wiem. Wymagany sprzęt i plecak (waga).
-7. **Teren, który masz pod ręką:**
-   - góry: jak daleko, jak często realnie możesz pojechać (co tydzień / co 2–4 tygodnie / raz w miesiącu / prawie nigdy),
-   - lokalne górki: wysokość (np. 20–60 m), nachylenie, czas dojazdu, oświetlenie,
-   - schody: klatka w bloku (ile pięter), schody stadionu, wieżowiec,
-   - bieżnia z nachyleniem (maks. %), stepper / StairMaster, rower stacjonarny lub trenażer,
-   - siłownia (jaka) lub sprzęt w domu.
+## Część A — pytania podstawowe (zawsze, ok. 10)
 
-**[A] Szczegóły startu asfaltowego:**
-5. Ostatni wynik na płaskiej trasie (dystans, czas, data) — z niego policzę tempa.
-6. Dostęp: bieżnia lekkoatletyczna, płaskie pętle, bieżnia mechaniczna, oświetlone trasy zimą.
-7. Jak znosisz mocne treningi: lubisz interwały, wolisz tempo ciągłe, nie lubisz ani jednego?
+1. **Imię i wiek.** „Jak mam się do Ciebie zwracać i ile masz lat?” (poniżej 18 lat → `references/bezpieczenstwo.md` §4).
+2. **Cel.** 1 góry / trail / ultra · 2 asfalt (5 km – maraton) · 3 jedno i drugie · 4 bez startu (forma, zdrowie, powrót po przerwie) · 5 nie wiem.
+3. **Start.** „Masz już wybrany start? Napisz nazwę i datę albo 1 — jeszcze nie.”
+4. **Ile biegasz teraz** (jak w przykładzie wyżej; jeśli masz dostęp do danych z zegarka — odczytaj i tylko potwierdź).
+5. **Ile dni w tygodniu możesz trenować.** 1 dwa–trzy · 2 cztery · 3 pięć · 4 sześć lub więcej.
+6. **Najdłuższy bieg w ostatnich 2 miesiącach.** 1 do 1 h · 2 1–2 h · 3 2–3 h · 4 dłużej · 5 nie pamiętam.
+7. **Gdzie biegasz** (zależnie od celu):
+   - góry: 1 mam góry blisko · 2 mam górki, schody albo bieżnię · 3 tylko płasko · 4 nie wiem,
+   - asfalt: „Twój ostatni wynik na płaskiej trasie? (np. 10 km w 52 min) albo 1 — nie mam”.
+8. **Zdrowie (przesiewowo).** „Czy coś z tego dotyczy Ciebie: ból lub ucisk w klatce przy wysiłku, kołatanie serca, duszność większa niż zwykle, zawroty lub omdlenia, lekarz ograniczył Ci wysiłek, ciąża lub rok po porodzie? 1 nie · 2 tak”. Odpowiedź „tak” → zalecenie konsultacji lekarskiej przed mocniejszym treningiem, plan od lekkiego ruchu. Potem krótko: „Czy coś Cię teraz boli? 1 nie · 2 tak (napisz co)”.
+9. **Zegarek.** 1 COROS · 2 Garmin · 3 Suunto · 4 Polar · 5 Apple Watch · 6 inny · 7 nie mam.
+10. **Ulubiony trener lub metoda.** „Trenujesz według kogoś albo jakiejś metody, którą lubisz? 1 nie · 2 tak (napisz kogo)”.
 
-## Runda 3. Czas i życie
+Po części A: podsumowanie w 3–5 krótkich linijkach i „Zgadza się? 1 tak · 2 chcę coś poprawić”.
 
-1. Które dni możesz trenować i ile czasu w każdy (np. pn 60 min, sb do 4 h)?
-2. Kiedy możliwe jest długie wybieganie (dzień, pora, maksymalny czas)?
-3. Stałe punkty: grupa biegowa, inne treningi, praca zmianowa, wyjazdy, opieka nad dziećmi (np. co drugi weekend), dni bez treningu.
-4. Preferowana pora treningu i czy możesz zrobić dwa treningi w jeden dzień.
-5. Jak śpisz zwykle (godziny) i jak oceniasz obecny stres (niski / średni / wysoki)?
+## Część B — doprecyzowanie (tylko gdy potrzebne, w trakcie pracy)
 
-## Runda 4. Zdrowie i historia (bezpieczeństwo)
+Nie pytasz o to w ankiecie. Pytasz w chwili, gdy dana informacja jest potrzebna do decyzji — nadal jednym pytaniem naraz. Do tego czasu stosujesz rozsądne ustawienia domyślne i mówisz o nich jednym zdaniem.
 
-1. Kontuzje w ostatnich 12 miesiącach i czy coś boli teraz (gdzie, od kiedy, 0–10)?
-2. **Screening — odpowiedz tak / nie:**
-   - Czy lekarz kiedykolwiek ograniczył Ci wysiłek fizyczny albo powiedział o chorobie serca lub nadciśnieniu?
-   - Czy przy wysiłku miewasz ból lub ucisk w klatce piersiowej, kołatanie serca, duszność nieproporcjonalną do wysiłku, zawroty głowy albo omdlenia?
-   - Czy jesteś w ciąży lub w ciągu roku po porodzie?
-   - Czy jest coś jeszcze (choroba przewlekła, leki wpływające na tętno lub wysiłek), co Twoim zdaniem trener powinien wiedzieć?
-   > Każde „tak” → zalecenie konsultacji z lekarzem przed treningiem intensywnym; plan zaczyna się od lekkiego ruchu albo czeka na zgodę lekarza. Szczegóły zostawiasz biegaczowi — zapisujesz tylko to, co sam chce zapisać.
-3. Czy jesteś teraz na redukcji masy ciała lub planujesz ją w sezonie?
-
-## Runda 5. Sprzęt i dane
-
-1. Zegarek (marka, model). Tętno z nadgarstka, opaski na ramię czy pasa na klatkę? Czujnik mocy (np. Stryd)?
-2. Konta: Strava, TrainingPeaks, intervals.icu, Tredict, inne.
-3. Czy masz zmierzone progi (próg tlenowy AeT, próg mleczanowy / LTHR, tętno maksymalne, VO2max z laboratorium)? Jak i kiedy?
-4. Gdzie chcesz trzymać notatki (Obsidian, Google Drive, inny folder)?
-
-## Runda 6. Metodologia i preferencje
-
-1. Czy masz ulubionych trenerów, książki, kanały albo metodę, którą chcesz stosować (np. Uphill Athlete, Jack Daniels, „norweska” metoda progowa, 80/20, trener z Twojego klubu)? Czego od nich nie lubisz?
-2. Co lubisz w treningu, a czego nie znosisz (bieżnia, interwały, siłownia, bieganie w grupie)?
-3. **[S]** Doświadczenie na siłowni (brak / podstawy / regularnie), dostępny sprzęt, ile razy w tygodniu możesz.
-4. Jak mam komunikować plany: krótko (tabela) czy z wyjaśnieniami?
-5. Tryb zapisu na zegarek: `pytaj` (pokazuję plan, wysyłam po „ok”) czy `wysyłaj` (wysyłam i raportuję)?
-6. Horyzont planu: tydzień czy dwa tygodnie?
-7. Jednostki: kilometry czy mile?
+| Kiedy | O co zapytać | Domyślnie, zanim zapytasz |
+|---|---|---|
+| przed pierwszym planem | które dni odpadają w tym tygodniu, ile czasu w dzień powszedni i na długie | rozkład z odpowiedzi 5, długie w weekend |
+| przed pierwszym planem | stałe punkty (grupa biegowa, praca zmianowa, opieka nad dziećmi) | brak |
+| gdy plan ma siłownię | doświadczenie (1 brak · 2 podstawy · 3 regularnie), dostęp (siłownia / dom) | ćwiczenia w domu, bez sprzętu |
+| cel górski | przewyższenie i limit startu, wysokość górki, liczba pięter, nachylenie bieżni, jak często w góry | ogólnie z odpowiedzi 7 |
+| cel asfaltowy | dostęp do bieżni lekkoatletycznej, lubi interwały czy tempo ciągłe | trasa płaska, tempo wg odczuć |
+| przy strefach / testach | pas na klatkę czy pomiar z nadgarstka, zmierzone progi | strefy tymczasowe z testu mowy |
+| przy podłączaniu zegarka | konta (Strava, TrainingPeaks, intervals.icu, Tredict) | — |
+| po pierwszym planie | styl (1 krótko · 2 z wyjaśnieniami), zapis na zegarek (1 pytaj przed wysłaniem · 2 wysyłaj sam), horyzont (1 tydzień · 2 dwa tygodnie), jednostki (km / mile), wygląd planu (1 lista na telefon · 2 tabela) | krótko · pytaj · tydzień · km · lista |
+| przy obserwacjach w Pętli Wiedzy | sen, stres, redukcja masy ciała | brak danych |
+| przy pierwszym długim biegu górskim | kijki, plecak, wymagany sprzęt | — |
 
 ## Po ankiecie
 
-Pokaż podsumowanie (5–8 linijek): cel i data, punkt startowy, dostępny czas, teren i sprzęt, ograniczenia, flagi zdrowotne (tylko „są / nie ma” + zalecenie), preferencje. Poproś o poprawki. Zapisz do `Profil biegacza.md`.
+Zapisz do `Profil biegacza.md` (pola bez odpowiedzi: „brak danych” albo wartość domyślna z dopiskiem „domyślnie”). Część B uzupełniasz w profilu na bieżąco.

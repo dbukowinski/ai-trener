@@ -6,11 +6,11 @@
 
 Uruchamiasz instrukcję, AI przeprowadza ankietę, proponuje metodologię **szytą pod Ciebie** (Twój ulubiony trener albo sprawdzony moduł z paczki), zakłada Twój projekt treningowy z pamięcią opartą na dowodach (Pętla Wiedzy) i wysyła plany na zegarek.
 
-> Stan: **wersja testowa 0.2.0** (listopad 2026), po polsku i [po angielsku](README.en.md). Szukam testerów — zobacz [TESTOWANIE.md](TESTOWANIE.md).
+> Stan: **wersja testowa 0.3.0** (listopad 2026), po polsku i [po angielsku](README.en.md). Szukam testerów — zobacz [TESTOWANIE.md](TESTOWANIE.md).
 
 ## Co dostajesz
 
-- **Instalację rozmową:** ankieta w kilku rundach (cel, życie, teren, sprzęt, zdrowie, preferencje) → propozycja metodologii do zatwierdzenia → podłączenie zegarka → gotowy projekt i pierwszy plan.
+- **Instalację rozmową, także na telefonie:** ok. 10 krótkich pytań, jedno na wiadomość, odpowiedź cyfrą → propozycja metodologii do zatwierdzenia → pierwszy plan → zapis projektu → zegarek (opcjonalnie, krok po kroku). Bez żargonu — trudniejsze słowa wyjaśnia słowniczek.
 - **Metodologię elastyczną:**
   - masz ulubionego trenera lub metodę → AI buduje metodologię z jego źródeł (z oceną wiarygodności i porównaniem z badaniami),
   - nie masz → **góry:** moduł oparty na szkole Evoke Endurance / Uphill Athlete (baza tlenowa, siła → wytrzymałość mięśniowa, zbiegi), **asfalt:** moduł oparty na badaniach rozkładu intensywności + do wyboru Daniels (VDOT), sub-próg „norweski” dla amatorów, Pfitzinger (maraton) albo 80/20.
@@ -49,14 +49,17 @@ Wybierz jedną ścieżkę. W każdej na koniec piszesz do AI: **„Zainstaluj AI
 2. W Claude (albo innym asystencie z konektorem Drive) napisz: „Znajdź na moim Google Drive plik START.md z paczki ai-trener i wykonaj instrukcję”.
 
 ### D. ChatGPT
-Projekt z instrukcjami + jeden plik wiedzy: [chatgpt/README.md](chatgpt/README.md). Uwaga: ChatGPT zwykle nie zapisuje plików, więc projekt prowadzisz w trybie kopiuj-wklej.
+Projekt z instrukcjami + jeden plik wiedzy: [chatgpt/README.md](chatgpt/README.md). Uwaga: ChatGPT zwykle nie zapisuje plików, więc plan zostaje w rozmowie (notatki możesz skopiować).
+
+### E. Najszybszy test (dowolny czat, 2 minuty)
+Pobierz [`dist/ai-trener-pelny.md`](dist/ai-trener-pelny.md), dołącz go w nowym czacie w Claude albo ChatGPT i napisz: „Przeczytaj ten plik i zainstaluj AI Trenera”.
 
 ## Zegarki (stan 2026-11)
 
 | Zegarek | Plan na zegarek |
 |---|---|
 | COROS | oficjalny COROS MCP (`https://mcp.coros.com/mcp`) |
-| Garmin | Tredict (oficjalny MCP) albo intervals.icu (darmowe, MCP społeczności) |
+| Garmin | bez instalowania: Tredict (oficjalny MCP, płatny), intervals.icu + oficjalny konektor Intervals (beta dla wspierających) albo athletedata (7 dni za darmo) — plan pojawia się w kalendarzu Garmin Connect |
 | Suunto | Tredict albo intervals.icu (SuuntoPlus Guides) |
 | Polar | TrainingPeaks → Polar Flow (oficjalna integracja); MCP do TrainingPeaks tylko nieoficjalne |
 | Wahoo, Apple Watch | Tredict (Apple Watch przez Watchletic), intervals.icu |

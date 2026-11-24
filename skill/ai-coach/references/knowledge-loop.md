@@ -222,7 +222,7 @@ I append when the user corrects me, a conclusion turned out wrong, or I missed d
 3. I apply rules and facts to the task.
 4. I may **test** a hypothesis (status `testing`): max 1 experiment per domain at a time, one variable, labelled ("test H-sport-004"), never before an important date in the profile.
 
-**Response format** (when the reply is about Loop conclusions):
+**Response format** (when the reply is about Loop conclusions; with the runner in plain words, without identifiers — per `SKILL.md` §4):
 - **What the data shows:** 1–3 facts with `source_id`.
 - **Hypothesis / counter-hypothesis:** with uncertainty and how to check.
 - **Meaning for the plan/task:** a small, proportionate decision or why nothing changes.

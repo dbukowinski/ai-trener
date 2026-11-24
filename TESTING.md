@@ -12,6 +12,8 @@ Thank you for testing! Feedback from real use is the most valuable: what worked,
 
 ## What to check
 
+- [ ] Could you go through the questionnaire comfortably on a phone (one question at a time, answer with a digit)?
+- [ ] Was anything unclear (abbreviations, jargon, technical instructions)?
 - [ ] Was the questionnaire clear and not too long?
 - [ ] Did the methodology proposal fit your goal and life? Did the AI ask about favourite coaches?
 - [ ] Did the plan respect your constraints (days, terrain, equipment)?

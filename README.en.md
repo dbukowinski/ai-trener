@@ -6,11 +6,11 @@
 
 You run the instructions, the AI walks you through a questionnaire, proposes a methodology **tailored to you** (your favourite coach or a proven module from the package), sets up your training project with evidence-based memory (Knowledge Loop) and sends plans to your watch.
 
-> Status: **test version 0.2.0** (November 2026). Testers wanted — see [TESTING.md](TESTING.md).
+> Status: **test version 0.3.0** (November 2026). Testers wanted — see [TESTING.md](TESTING.md).
 
 ## What you get
 
-- **Setup by conversation:** a questionnaire in a few rounds (goal, life, terrain, equipment, health, preferences) → methodology proposal for approval → watch connection → ready project and first plan.
+- **Setup by conversation, also on a phone:** about 10 short questions, one per message, answer with a digit → methodology proposal for approval → first plan → saving the project → watch (optional, step by step). No jargon — harder words are explained in a glossary.
 - **A flexible methodology:**
   - you have a favourite coach or method → the AI builds the methodology from their sources (with reliability ratings and a comparison with research),
   - you don't → **mountains:** a module based on the Evoke Endurance / Uphill Athlete school (aerobic base, strength → muscular endurance, descents); **road:** a module based on intensity-distribution research plus your choice of Daniels (VDOT), amateur "Norwegian" sub-threshold, Pfitzinger (marathon) or 80/20.
@@ -49,14 +49,17 @@ Pick one route. In each, finish by writing to the AI: **"Install AI Coach"**.
 2. In Claude (or another assistant with a Drive connector) write: "Find START.en.md from the ai-trener package on my Google Drive and follow it".
 
 ### D. ChatGPT
-A Project with instructions + one knowledge file: [chatgpt/README.en.md](chatgpt/README.en.md). Note: ChatGPT usually can't save files, so you run the project in copy-paste mode.
+A Project with instructions + one knowledge file: [chatgpt/README.en.md](chatgpt/README.en.md). Note: ChatGPT usually can't save files, so the plan stays in the conversation (you can copy the notes).
+
+### E. Quickest test (any chat, 2 minutes)
+Download [`dist/ai-coach-full.md`](dist/ai-coach-full.md), attach it in a new Claude or ChatGPT chat and write: "Read this file and install AI Coach".
 
 ## Watches (as of 2026-11)
 
 | Watch | Plan onto the watch |
 |---|---|
 | COROS | official COROS MCP (`https://mcp.coros.com/mcp`) |
-| Garmin | Tredict (official MCP) or intervals.icu (free, community MCP) |
+| Garmin | no installs: Tredict (official MCP, paid), intervals.icu + the official Intervals connector (beta for supporters) or athletedata (7 days free) — the plan appears in the Garmin Connect calendar |
 | Suunto | Tredict or intervals.icu (SuuntoPlus Guides) |
 | Polar | TrainingPeaks → Polar Flow (official integration); TrainingPeaks MCPs are unofficial only |
 | Wahoo, Apple Watch | Tredict (Apple Watch via Watchletic), intervals.icu |

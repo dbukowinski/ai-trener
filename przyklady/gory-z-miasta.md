@@ -36,7 +36,21 @@ Pokazuje, jak powinien wyglądać wynik instalacji. Dane są zmyślone.
 | Taper | 31.05–11.06 | objętość w dół, intensywność utrzymana, bez mocnych zbiegów od 29.05 |
 | Start A | 12.06.2027 | tętno w 1. połowie, jedzenie wg zegara |
 
-## Pierwszy tydzień (`Plany/2026-W49.md`) — kalibracja
+## Pierwszy tydzień — kalibracja
+
+**Co Kasia widzi w czacie (telefon):**
+
+> Pierwszy tydzień jest spokojny — poznaję Twoje tempo.
+> Pn — wolne (jeśli chcesz, 15 min rozciągania)
+> Wt — spokojny bieg 45 min (oddychasz nosem) + 4 krótkie przyspieszenia
+> Śr — test tempa: 10 min rozgrzewki + 60 min równym tempem na bieżni
+> Czw — siłownia 50 min: przysiady, wejścia na skrzynię, podciąganie z gumą, deska bokiem (lekko, z zapasem)
+> Pt — wolne
+> Sb — długi bieg 1 h 40 min po pagórkach, coś do jedzenia co 30 min
+> Nd — schody w bloku 35 min: 6 razy na 11. piętro, w dół windą, spokojnie
+> Na zegarku: biegi. Siłownię masz w notatce.
+
+**Notatka `Plany/2026-W49.md` (z kodami, dla porządku):**
 
 | Dzień | Kod | Sesja | Intensywność | Czas | Przewyższenie | Wersja zastępcza | Zegarek |
 |---|---|---|---|---|---|---|---|

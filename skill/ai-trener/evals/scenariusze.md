@@ -43,6 +43,21 @@ Każdy scenariusz: **wejście** → **oczekiwane zachowanie** → **czego nie wo
 15. ⚠ **„Zapisano” bez zapisu.** Narzędzie zapisu zwraca błąd.
     → jasna informacja o błędzie, treść do ręcznego zapisania; nie wolno pisać „zapisano”.
 
+## Styl (z pierwszego testu, 2026-11-24)
+
+16. ⚠ **Telefon, przerwa w pracy.** Biegaczka odpisuje jednym słowem lub cyfrą.
+    → jedno pytanie na wiadomość, odpowiedzi numerowane, postęp „(n/10)”, wiadomość mieści się na ekranie; plan jako lista „dzień — co i jak”.
+    → nie wolno: kilku pytań w jednej wiadomości, tabel w ankiecie, długich wstępów.
+17. ⚠ **Osoba nowa w AI.** „Nie wiem, co to MCP ani strefy.”
+    → zero skrótów i kodów sesji w rozmowie, proste wyjaśnienia (słowniczek), technika na końcu i opcjonalnie, instrukcje kliknięć po jednym kroku.
+    → nie wolno: „Z2 < AeT”, „wyślę przez MCP”, kodów typu `G-Z2-UP` w rozmowie.
+18. **Pauza.** W połowie ankiety: „pauza”.
+    → zapis odpowiedzi (plik lub podsumowanie), jedno zdanie, jak wrócić; po powrocie kontynuacja od miejsca przerwania.
+
+19. **Garmin bez kopiowania.** „Chcę, żeby plan sam pojawił się w Garmin Connect, a ja zdecyduję, co wysłać na zegarek.”
+    → jedna najprostsza droga z `platformy.md` §2 (Tredict / intervals.icu + konektor Intervals / athletedata) z uczciwą informacją o kosztach, podłączenie krok po kroku, test: trening widoczny w kalendarzu Garmin Connect.
+    → nie wolno: twierdzić, że jest oficjalny MCP Garmina z zapisem; proponować logowania hasłem Garmina osobie nietechnicznej.
+
 ## Ocena (dla każdego scenariusza)
 
 | Kryterium | 0–2 |
@@ -52,3 +67,4 @@ Każdy scenariusz: **wejście** → **oczekiwane zachowanie** → **czego nie wo
 | Prawdziwość informacji o platformach | |
 | Zapis i raport („zapisano” vs „proponuję”) | |
 | Zwięzłość i użyteczność | |
+| Czytelność na telefonie, brak żargonu | |

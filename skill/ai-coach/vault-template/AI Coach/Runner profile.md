@@ -52,4 +52,4 @@ updated: <YYYY-MM-DD>
 - Favourite coaches / methods: <…>
 - Like: <…> · Dislike: <…>
 - Gym experience: <…>
-- Communication: <short / with explanations> · write mode: <ask / send> · horizon: <1 / 2 weeks> · units: <km / miles>
+- Communication: <short / with explanations> · write mode: <ask / send> · horizon: <1 / 2 weeks> · units: <km / miles> · plan layout: <list / table>

@@ -1,5 +1,17 @@
 # Zmiany / Changelog
 
+## 0.3.0 — 2026-11-24 (po pierwszym teście / after the first test)
+
+Uwagi testerki: na telefonie ankieta była mało czytelna (dużo pytań w jednej wiadomości), za dużo skrótów, trudne dla osób rzadko używających AI.
+
+- Ankieta: ok. 10 pytań podstawowych, **jedno na wiadomość**, odpowiedzi numerowane, postęp „(n/10)”, opcja „nie wiem / pomiń”, „pauza”; szczegóły dopytywane dopiero, gdy są potrzebne (z rozsądnymi ustawieniami domyślnymi).
+- Instalacja w nowej kolejności: krótka ankieta → krótka metodologia → **pierwszy plan** → zapis → zegarek (opcjonalnie, krok po kroku).
+- Styl rozmowy w `SKILL.md` §4: krótko, zero skrótów i kodów sesji w rozmowie, technika po ludzku; plan domyślnie jako lista na telefon.
+- Słowniczek po ludzku (`references/slowniczek.md`), kopiowany do projektu biegacza.
+- Zegarek bez kopiowania i bez instalowania: tabela „Najprościej” w `platformy.md` §2 (np. Garmin: Tredict, intervals.icu + oficjalny konektor Intervals w becie, athletedata) — plan pojawia się w kalendarzu Garmin Connect.
+- Nowe scenariusze testowe 16–19; najszybszy test w README (jeden plik w dowolnym czacie).
+- EN: the same changes in the English edition (`questionnaire.md`, `installation.md`, `glossary.md`, `SKILL.md` §4–5, `platforms.md` §2 "Simplest", scenarios 16–19).
+
 ## 0.2.0 — 2026-11-24
 
 - Wersja angielska paczki: skill `ai-coach` (`skill/ai-coach/`), `README.en.md`, `START.en.md`, `TESTING.md`, instrukcje ChatGPT, przykłady (`examples/`), szablon zgłoszenia, paczki `dist/ai-coach-skill.zip` i `dist/ai-coach-full.md`.

@@ -22,7 +22,20 @@
 
 Droga na zegarek: **intervals.icu** (darmowe; „Upload planned workouts” zaznaczone, typ: Run) + lokalny MCP `intervals-icu-mcp` w Claude Desktop. Plan trafia do Garmin Connect ok. tydzień naprzód. Siła — w notatce.
 
-## Pierwszy tydzień (`Plany/2026-W49.md`)
+## Pierwszy tydzień
+
+**Co Marek widzi w czacie (telefon):**
+
+> Pn — ćwiczenia w domu 30 min
+> Wt — 15 min truchtu + 2 × 1,6 km „komfortowo ciężko” (ok. 5:00/km), minuta przerwy + 10 min truchtu
+> Śr — wolne
+> Czw — spokojny bieg 40 min + 6 krótkich przyspieszeń
+> Pt — ćwiczenia w domu 30 min
+> Sb — spokojny bieg 40 min
+> Nd — długi spokojny bieg 1 h 10 min
+> Biegi wysłałem na zegarek.
+
+**Notatka `Plany/2026-W49.md` (z kodami, dla porządku):**
 
 | Dzień | Kod | Sesja | Intensywność | Czas / dystans | Zegarek |
 |---|---|---|---|---|---|

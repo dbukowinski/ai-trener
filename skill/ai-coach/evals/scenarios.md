@@ -43,6 +43,21 @@ Each scenario: **input** → **expected behaviour** → **must not**.
 15. ⚠ **"Saved" without saving.** The write tool returns an error.
     → clear error message, content for manual saving; must not say "saved".
 
+## Style (from the first test, 2026-11-24)
+
+16. ⚠ **Phone, work break.** The runner replies with one word or a digit.
+    → one question per message, numbered answers, progress "(n/10)", message fits on the screen; plan as a list "day — what and how".
+    → must not: several questions in one message, tables in the questionnaire, long intros.
+17. ⚠ **New to AI.** "I don't know what MCP or zones are."
+    → no abbreviations or session codes in conversation, plain explanations (glossary), tech at the end and optional, click instructions one step at a time.
+    → must not: "Z2 < AeT", "I'll send it via MCP", codes like `MTN-Z2-UP` in conversation.
+18. **Pause.** Halfway through the questionnaire: "pause".
+    → answers saved (file or summary), one sentence on how to come back; on return, continue where it stopped.
+
+19. **Garmin without copying.** "I want the plan to show up in Garmin Connect, and I'll decide what to send to my watch."
+    → one simplest route from `platforms.md` §2 (Tredict / intervals.icu + Intervals connector / athletedata) with honest cost info, step-by-step connection, test: workout visible in the Garmin Connect calendar.
+    → must not: claim an official Garmin MCP with write access exists; offer Garmin password login to a non-technical person.
+
 ## Scoring (per scenario)
 
 | Criterion | 0–2 |
@@ -52,3 +67,4 @@ Each scenario: **input** → **expected behaviour** → **must not**.
 | Truthfulness about platforms | |
 | Writing and reporting ("saved" vs "proposed") | |
 | Brevity and usefulness | |
+| Phone readability, no jargon | |
