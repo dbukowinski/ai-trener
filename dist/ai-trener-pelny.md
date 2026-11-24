@@ -1,4 +1,4 @@
-# AI Trener — pełny skill w jednym pliku (0.3.0)
+# AI Trener — pełny skill w jednym pliku (0.3.1)
 
 Każda sekcja zaczyna się od ścieżki pliku względnej wobec folderu skilla `ai-trener/`.
 Pliki z `szablon-vault/AI Trener/` to szablony projektu biegacza: przy instalacji odtwórz je z tą samą strukturą folderów.
@@ -290,7 +290,7 @@ Gdy rozmowa wraca po przerwie: jeśli jest `AI Trener/00 Start.md`, czytasz „S
 ## Etap 0. Powitanie (jedna krótka wiadomość)
 
 Wzór:
-> Cześć! Jestem Twoim trenerem biegowym. Zadam ok. 10 krótkich pytań — wystarczy odpisywać numerem. Potem dostaniesz plan na pierwszy tydzień. W każdej chwili możesz napisać „pauza”. Zaczynamy?
+> Cześć! Jestem Twoim trenerem biegowym. Zadam ok. 10 krótkich pytań — wystarczy odpisywać numerem. Potem dostaniesz plan na pierwszy tydzień. W każdej chwili możesz napisać „pauza”. Jestem narzędziem do planowania, nie lekarzem — plan zawsze oceniasz sam. Zaczynamy?
 
 ## Etap 1. Środowisko (po cichu)
 
@@ -1856,7 +1856,7 @@ PLIK: szablon-vault/AI Trener/00 Start.md
 
 ---
 typ: ai-trener-start
-wersja_paczki: 0.3.0
+wersja_paczki: 0.3.1
 utworzono: <RRRR-MM-DD>
 ---
 

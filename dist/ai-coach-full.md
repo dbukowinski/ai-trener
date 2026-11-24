@@ -1,4 +1,4 @@
-# AI Coach — the whole skill in one file (0.3.0)
+# AI Coach — the whole skill in one file (0.3.1)
 
 Each section starts with the file path relative to the `ai-coach/` skill folder.
 Files from `vault-template/AI Coach/` are the runner's project templates: recreate them with the same folder structure at installation.
@@ -187,7 +187,7 @@ When the conversation resumes after a break: if `AI Coach/00 Start.md` exists, r
 ## Stage 0. Welcome (one short message)
 
 Template:
-> Hi! I'm your running coach. I'll ask about 10 short questions — just reply with a number. Then you'll get a plan for your first week. You can write "pause" at any time. Shall we start?
+> Hi! I'm your running coach. I'll ask about 10 short questions — just reply with a number. Then you'll get a plan for your first week. You can write "pause" at any time. I'm a planning tool, not a doctor — you always judge the plan yourself. Shall we start?
 
 ## Stage 1. Environment (silently)
 
@@ -1856,7 +1856,7 @@ FILE: vault-template/AI Coach/00 Start.md
 
 ---
 type: ai-coach-start
-package_version: 0.3.0
+package_version: 0.3.1
 created: <YYYY-MM-DD>
 ---
 

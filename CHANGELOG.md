@@ -1,5 +1,12 @@
 # Zmiany / Changelog
 
+## 0.3.1 — 2026-11-24
+
+- Przygotowanie do publikacji: w README nowe sekcje „Bezpieczeństwo i odpowiedzialność”, „Prywatność” (kto przetwarza dane: asystent AI i podłączone platformy) oraz „Uwagi i wsparcie”.
+- Powitanie (etap 0 instalacji): jedno zdanie, że AI Trener jest narzędziem do planowania, nie lekarzem, a plan biegacz zawsze ocenia sam.
+- Release prep: README gets "Safety and responsibility", "Privacy" (who processes data: your AI assistant and the platforms you connect) and "Feedback and support" sections.
+- Welcome (installation stage 0): one sentence saying AI Coach is a planning tool, not a doctor, and the runner always judges the plan.
+
 ## 0.3.0 — 2026-11-24 (po pierwszym teście / after the first test)
 
 Uwagi testerki: na telefonie ankieta była mało czytelna (dużo pytań w jednej wiadomości), za dużo skrótów, trudne dla osób rzadko używających AI.
