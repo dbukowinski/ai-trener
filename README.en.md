@@ -6,7 +6,7 @@
 
 You run the instructions, the AI walks you through a questionnaire, proposes a methodology **tailored to you** (your favourite coach or a proven module from the package), sets up your training project with evidence-based memory (Knowledge Loop) and sends plans to your watch.
 
-> Status: **test version 0.2.0** (November 2026). Testers wanted — see [TESTING.md](TESTING.md).
+> Status: **test version 0.2.1** (November 2026). Testers wanted — see [TESTING.md](TESTING.md).
 
 ## What you get
 
@@ -91,12 +91,25 @@ dist/                            ← ready packages: skill ZIPs, whole skill in 
 scripts/zbuduj-zip.sh            ← builds the packages from skill/
 ```
 
-## Safety and privacy
+## Safety and responsibility
 
-- AI Coach is a training-planning tool, **not a doctor or physiotherapist**. The questionnaire includes a short health screening; with worrying symptoms the AI recommends a check-up and doesn't build an intense plan.
+- AI Coach is a training-planning tool, **not a doctor, physiotherapist or licensed coach**. The questionnaire includes a short health screening; with worrying symptoms the AI recommends a check-up and doesn't build an intense plan.
+- If you have any doubts about your health, see a doctor before you start training.
+- The AI can make mistakes. You judge every plan yourself and train at your own risk; with pain or feeling unwell, skip the session whatever the plan says.
 - Under 18: training under adult supervision, no weight loss (rules in `references/safety.md`).
-- Your data stays in your files and your accounts. The AI sends only general terms to search engines.
+- The package is provided "as is", without warranty (MIT licence).
+
+## Privacy
+
+- The package has no server and collects nothing. Your training project lives in your own files (folder, vault, Google Drive).
+- The conversation and questionnaire answers are processed by the AI assistant you use (Claude, ChatGPT…), and training data by the platforms you connect (e.g. COROS, Tredict, intervals.icu), under their terms. Check the privacy settings of your AI account.
+- Share only as much about your health as you want; you don't need to upload test results or medical records.
+- The AI sends only general terms to search engines, never your data.
 - Unofficial integrations (e.g. password login to Garmin Connect, TrainingPeaks cookie) are described as an option for advanced users, at your own risk.
+
+## Feedback and support
+
+This is a private project built in my spare time. Report bugs, ideas and test results in [Issues](https://github.com/dbukowinski/ai-trener/issues) ("Tester feedback" template). I reply when I can; Issues are not for individual training or medical advice. Pull requests welcome — rules in [AGENTS.md](AGENTS.md).
 
 ## Sources and credits
 

@@ -1,4 +1,4 @@
-# AI Coach — the whole skill in one file (0.2.0)
+# AI Coach — the whole skill in one file (0.2.1)
 
 Each section starts with the file path relative to the `ai-coach/` skill folder.
 Files from `vault-template/AI Coach/` are the runner's project templates: recreate them with the same folder structure at installation.
@@ -96,7 +96,7 @@ FILE: references/installation.md
 
 You take the runner through 7 stages. It usually takes 20–40 minutes of conversation. After each stage, save the result to files so an interrupted conversation isn't lost. When the conversation resumes after a break, read `AI Coach/00 Start.md` → "Installation status" and continue from the first unfinished stage.
 
-At the start, tell the runner in 2–3 sentences what will happen: questionnaire, methodology proposal to approve, watch connection, project setup, first plan. Say they can stop at any point.
+At the start, tell the runner in 2–3 sentences what will happen: questionnaire, methodology proposal to approve, watch connection, project setup, first plan. Say they can stop at any point. Add one sentence: you are a planning tool, not a doctor or physiotherapist — the runner judges every plan and trains at their own risk, and the conversation data is processed by this AI assistant and the platforms they connect.
 
 ## Stage 1. Environment: where I write and what's connected
 
@@ -1747,7 +1747,7 @@ FILE: vault-template/AI Coach/00 Start.md
 
 ---
 type: ai-coach-start
-package_version: 0.2.0
+package_version: 0.2.1
 created: <YYYY-MM-DD>
 ---
 

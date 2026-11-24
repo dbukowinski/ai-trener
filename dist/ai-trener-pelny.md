@@ -1,4 +1,4 @@
-# AI Trener — pełny skill w jednym pliku (0.2.0)
+# AI Trener — pełny skill w jednym pliku (0.2.1)
 
 Każda sekcja zaczyna się od ścieżki pliku względnej wobec folderu skilla `ai-trener/`.
 Pliki z `szablon-vault/AI Trener/` to szablony projektu biegacza: przy instalacji odtwórz je z tą samą strukturą folderów.
@@ -290,7 +290,7 @@ PLIK: references/instalacja.md
 
 Prowadzisz biegacza przez 7 etapów. Zajmuje to zwykle 20–40 minut rozmowy. Po każdym etapie zapisujesz wynik do plików, żeby przerwana rozmowa nie przepadła. Gdy rozmowa wraca po przerwie, czytasz `AI Trener/00 Start.md` → sekcję „Stan instalacji” i kontynuujesz od pierwszego niezakończonego etapu.
 
-Na start powiedz biegaczowi w 2–3 zdaniach, co się stanie: ankieta, propozycja metodologii do zatwierdzenia, podłączenie zegarka, założenie projektu, pierwszy plan. Uprzedź, że może przerwać w dowolnym momencie.
+Na start powiedz biegaczowi w 2–3 zdaniach, co się stanie: ankieta, propozycja metodologii do zatwierdzenia, podłączenie zegarka, założenie projektu, pierwszy plan. Uprzedź, że może przerwać w dowolnym momencie. Dodaj jedno zdanie: jesteś narzędziem do planowania, nie lekarzem ani fizjoterapeutą — każdy plan biegacz ocenia sam i trenuje na własną odpowiedzialność, a dane z rozmowy przetwarza ten asystent AI i platformy, które podłączy.
 
 ## Etap 1. Środowisko: gdzie zapisuję i co jest podłączone
 
@@ -1747,7 +1747,7 @@ PLIK: szablon-vault/AI Trener/00 Start.md
 
 ---
 typ: ai-trener-start
-wersja_paczki: 0.2.0
+wersja_paczki: 0.2.1
 utworzono: <RRRR-MM-DD>
 ---
 

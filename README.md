@@ -6,7 +6,7 @@
 
 Uruchamiasz instrukcję, AI przeprowadza ankietę, proponuje metodologię **szytą pod Ciebie** (Twój ulubiony trener albo sprawdzony moduł z paczki), zakłada Twój projekt treningowy z pamięcią opartą na dowodach (Pętla Wiedzy) i wysyła plany na zegarek.
 
-> Stan: **wersja testowa 0.2.0** (listopad 2026), po polsku i [po angielsku](README.en.md). Szukam testerów — zobacz [TESTOWANIE.md](TESTOWANIE.md).
+> Stan: **wersja testowa 0.2.1** (listopad 2026), po polsku i [po angielsku](README.en.md). Szukam testerów — zobacz [TESTOWANIE.md](TESTOWANIE.md).
 
 ## Co dostajesz
 
@@ -90,12 +90,25 @@ dist/                        ← gotowe paczki: ZIP skilla, cały skill w jednym
 scripts/zbuduj-zip.sh        ← budowanie paczek z folderu skill/
 ```
 
-## Bezpieczeństwo i prywatność
+## Bezpieczeństwo i odpowiedzialność
 
-- AI Trener to narzędzie do planowania treningu, **nie lekarz ani fizjoterapeuta**. Ankieta zawiera krótki screening zdrowotny; przy niepokojących objawach AI zaleca konsultację i nie układa intensywnego planu.
+- AI Trener to narzędzie do planowania treningu, **nie lekarz, fizjoterapeuta ani licencjonowany trener**. Ankieta zawiera krótki screening zdrowotny; przy niepokojących objawach AI zaleca konsultację i nie układa intensywnego planu.
+- Jeśli masz wątpliwości co do zdrowia, przed rozpoczęciem treningu skonsultuj się z lekarzem.
+- AI może się pomylić. Każdy plan oceniasz sam i trenujesz na własną odpowiedzialność; przy bólu lub złym samopoczuciu odpuszczasz sesję niezależnie od planu.
 - Osoby poniżej 18 lat: trening pod nadzorem dorosłego, bez redukcji masy ciała (zasady w `references/bezpieczenstwo.md`).
-- Twoje dane zostają w Twoich plikach i na Twoich kontach. Do wyszukiwarek AI wysyła tylko ogólne terminy.
+- Paczka jest udostępniana „tak jak jest”, bez gwarancji (licencja MIT).
+
+## Prywatność
+
+- Paczka nie ma serwera i niczego nie zbiera. Projekt treningowy powstaje w Twoich plikach (folder, vault, Google Drive).
+- Rozmowę i dane z ankiety przetwarza asystent AI, którego używasz (Claude, ChatGPT…), a dane treningowe — platformy, które sam podłączysz (np. COROS, Tredict, intervals.icu), zgodnie z ich regulaminami. Sprawdź ustawienia prywatności swojego konta AI.
+- O zdrowiu piszesz tylko tyle, ile chcesz; nie musisz wgrywać wyników badań ani dokumentacji medycznej.
+- Do wyszukiwarek AI wysyła tylko ogólne terminy, bez Twoich danych.
 - Integracje nieoficjalne (np. logowanie hasłem do Garmin Connect, ciasteczko TrainingPeaks) są opisane jako opcja dla zaawansowanych, na własne ryzyko.
+
+## Uwagi i wsparcie
+
+To projekt prywatny, rozwijany po godzinach. Błędy, pomysły i wyniki testów zgłaszaj w [Issues](https://github.com/dbukowinski/ai-trener/issues) (szablon „Uwagi testera”). Odpowiadam w miarę czasu; Issues nie służą do indywidualnych konsultacji treningowych ani medycznych. Pull requesty mile widziane — zasady w [AGENTS.md](AGENTS.md).
 
 ## Źródła i podziękowania
 

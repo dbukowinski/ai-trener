@@ -1,5 +1,12 @@
 # Zmiany / Changelog
 
+## 0.2.1 — 2026-11-24
+
+- Przygotowanie do publikacji: w README nowe sekcje „Bezpieczeństwo i odpowiedzialność”, „Prywatność” (kto przetwarza dane: asystent AI i podłączone platformy) oraz „Uwagi i wsparcie”.
+- Instalacja: na starcie AI mówi w jednym zdaniu, że jest narzędziem do planowania, nie lekarzem, a biegacz trenuje na własną odpowiedzialność.
+- Release prep: README gets "Safety and responsibility", "Privacy" (who processes data: your AI assistant and the platforms you connect) and "Feedback and support" sections.
+- Installation: at the start the AI says in one sentence that it is a planning tool, not a doctor, and that the runner trains at their own risk.
+
 ## 0.2.0 — 2026-11-24
 
 - Wersja angielska paczki: skill `ai-coach` (`skill/ai-coach/`), `README.en.md`, `START.en.md`, `TESTING.md`, instrukcje ChatGPT, przykłady (`examples/`), szablon zgłoszenia, paczki `dist/ai-coach-skill.zip` i `dist/ai-coach-full.md`.
