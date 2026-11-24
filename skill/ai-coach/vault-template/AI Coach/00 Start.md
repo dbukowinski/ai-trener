@@ -1,6 +1,6 @@
 ---
 type: ai-coach-start
-package_version: 0.3.0
+package_version: 0.3.1
 created: <YYYY-MM-DD>
 ---
 

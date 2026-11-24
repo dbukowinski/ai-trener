@@ -1,6 +1,6 @@
 ---
 typ: ai-trener-start
-wersja_paczki: 0.3.0
+wersja_paczki: 0.3.1
 utworzono: <RRRR-MM-DD>
 ---
 
