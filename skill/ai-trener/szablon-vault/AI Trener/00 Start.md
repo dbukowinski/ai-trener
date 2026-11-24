@@ -1,6 +1,6 @@
 ---
 typ: ai-trener-start
-wersja_paczki: 0.1.0
+wersja_paczki: 0.2.0
 utworzono: <RRRR-MM-DD>
 ---
 
@@ -32,6 +32,7 @@ To jest Twój projekt treningowy. Trener (AI) czyta ten plik na początku każde
 | `source_id` aktywności | <np. coros:<id>> |
 | Tryb zapisu planów | <pytaj / wysyłaj> |
 | Horyzont planu | <1 / 2 tygodnie> |
+| Jednostki | <km / mile> |
 | Styl komunikacji | <krótko / z wyjaśnieniami> |
 | Rytm | <np. przegląd tygodnia w niedzielę wieczorem — zadanie cykliczne: tak / nie> |
 

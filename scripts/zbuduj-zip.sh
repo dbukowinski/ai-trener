@@ -1,50 +1,67 @@
 #!/usr/bin/env bash
-# Buduje paczki dystrybucyjne skilla ai-trener:
-#   dist/ai-trener-skill.zip  — do wgrania jako skill w Claude (folder ai-trener w korzeniu ZIP)
-#   dist/ai-trener-pelny.md   — cały skill w jednym pliku (ChatGPT Projects, inne asystenty)
+# Buduje paczki dystrybucyjne obu wersji językowych / Builds distribution packages for both editions:
+#   dist/ai-trener-skill.zip, dist/ai-trener-pelny.md  — wersja polska (skill/ai-trener)
+#   dist/ai-coach-skill.zip,  dist/ai-coach-full.md    — English edition (skill/ai-coach)
+# ZIP: folder skilla w korzeniu (do wgrania w Claude) / skill folder at the root (for upload to Claude).
+# .md: cały skill w jednym pliku (ChatGPT Projects, inne asystenty) / whole skill in one file.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SKILL_DIR="$ROOT/skill/ai-trener"
 DIST="$ROOT/dist"
 mkdir -p "$DIST"
 
-# 1. ZIP (bez .gitkeep i plików systemowych)
-rm -f "$DIST/ai-trener-skill.zip"
-(
-  cd "$ROOT/skill"
-  zip -q -r -X "$DIST/ai-trener-skill.zip" ai-trener \
-    -x '*.DS_Store' -x '*/.gitkeep'
-)
+# build <skill_dir_name> <zip_name> <md_name> <vault_dir> <version_key> <title> <intro_1> <intro_2> <file_label>
+build() {
+  local name="$1" zip_name="$2" md_name="$3" vault_dir="$4" version_key="$5"
+  local title="$6" intro1="$7" intro2="$8" label="$9"
+  local skill_dir="$ROOT/skill/$name"
 
-# 2. Jeden plik Markdown: SKILL.md, potem references, metodologie, evals, szablon-vault
-OUT="$DIST/ai-trener-pelny.md"
-VERSION="$(grep -m1 '^wersja_paczki:' "$SKILL_DIR/szablon-vault/AI Trener/00 Start.md" | awk '{print $2}')"
-{
-  echo "# AI Trener — pełny skill w jednym pliku (wersja ${VERSION})"
-  echo
-  echo "Każda sekcja zaczyna się od ścieżki pliku względnej wobec folderu skilla \`ai-trener/\`."
-  echo "Pliki z \`szablon-vault/AI Trener/\` to szablony projektu biegacza: przy instalacji odtwórz je z tą samą strukturą folderów."
-  echo
+  rm -f "$DIST/$zip_name"
   (
-    cd "$SKILL_DIR"
-    {
-      echo "SKILL.md"
-      find references -type f -name '*.md' | sort
-      find metodologie -type f -name '*.md' | sort
-      find evals -type f -name '*.md' | sort
-      find szablon-vault -type f -name '*.md' | sort
-    } | while IFS= read -r f; do
-      echo
-      echo "================================================================"
-      echo "PLIK: ${f}"
-      echo "================================================================"
-      echo
-      cat "$f"
-    done
+    cd "$ROOT/skill"
+    zip -q -r -X "$DIST/$zip_name" "$name" -x '*.DS_Store' -x '*/.gitkeep' -x '*/__pycache__/*'
   )
-} > "$OUT"
 
-echo "Gotowe:"
+  local version
+  version="$(grep -m1 "^${version_key}:" "$skill_dir/$vault_dir/00 Start.md" | awk '{print $2}')"
+  local out="$DIST/$md_name"
+  {
+    echo "# ${title} (${version})"
+    echo
+    echo "$intro1"
+    echo "$intro2"
+    echo
+    (
+      cd "$skill_dir"
+      {
+        echo "SKILL.md"
+        for d in references methodology metodologie evals; do
+          [ -d "$d" ] && find "$d" -type f -name '*.md' | sort
+        done
+        find "$(dirname "$vault_dir")" -type f -name '*.md' | sort
+      } | while IFS= read -r f; do
+        echo
+        echo "================================================================"
+        echo "${label}: ${f}"
+        echo "================================================================"
+        echo
+        cat "$f"
+      done
+    )
+  } > "$out"
+}
+
+build ai-trener ai-trener-skill.zip ai-trener-pelny.md "szablon-vault/AI Trener" wersja_paczki \
+  "AI Trener — pełny skill w jednym pliku" \
+  "Każda sekcja zaczyna się od ścieżki pliku względnej wobec folderu skilla \`ai-trener/\`." \
+  "Pliki z \`szablon-vault/AI Trener/\` to szablony projektu biegacza: przy instalacji odtwórz je z tą samą strukturą folderów." \
+  "PLIK"
+
+build ai-coach ai-coach-skill.zip ai-coach-full.md "vault-template/AI Coach" package_version \
+  "AI Coach — the whole skill in one file" \
+  "Each section starts with the file path relative to the \`ai-coach/\` skill folder." \
+  "Files from \`vault-template/AI Coach/\` are the runner's project templates: recreate them with the same folder structure at installation." \
+  "FILE"
+
+echo "Gotowe / Done:"
 ls -l "$DIST"
-unzip -l "$DIST/ai-trener-skill.zip" | tail -1

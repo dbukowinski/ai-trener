@@ -1,4 +1,4 @@
-# AI Trener — pełny skill w jednym pliku (wersja 0.1.0)
+# AI Trener — pełny skill w jednym pliku (0.2.0)
 
 Każda sekcja zaczyna się od ścieżki pliku względnej wobec folderu skilla `ai-trener/`.
 Pliki z `szablon-vault/AI Trener/` to szablony projektu biegacza: przy instalacji odtwórz je z tą samą strukturą folderów.
@@ -169,6 +169,7 @@ Zasady prowadzenia:
 4. Jak mam komunikować plany: krótko (tabela) czy z wyjaśnieniami?
 5. Tryb zapisu na zegarek: `pytaj` (pokazuję plan, wysyłam po „ok”) czy `wysyłaj` (wysyłam i raportuję)?
 6. Horyzont planu: tydzień czy dwa tygodnie?
+7. Jednostki: kilometry czy mile?
 
 ## Po ankiecie
 
@@ -1746,7 +1747,7 @@ PLIK: szablon-vault/AI Trener/00 Start.md
 
 ---
 typ: ai-trener-start
-wersja_paczki: 0.1.0
+wersja_paczki: 0.2.0
 utworzono: <RRRR-MM-DD>
 ---
 
@@ -1778,6 +1779,7 @@ To jest Twój projekt treningowy. Trener (AI) czyta ten plik na początku każde
 | `source_id` aktywności | <np. coros:<id>> |
 | Tryb zapisu planów | <pytaj / wysyłaj> |
 | Horyzont planu | <1 / 2 tygodnie> |
+| Jednostki | <km / mile> |
 | Styl komunikacji | <krótko / z wyjaśnieniami> |
 | Rytm | <np. przegląd tygodnia w niedzielę wieczorem — zadanie cykliczne: tak / nie> |
 
@@ -2471,7 +2473,7 @@ aktualizacja: <RRRR-MM-DD>
 - Ulubieni trenerzy / metody: <…>
 - Lubię: <…> · Nie lubię: <…>
 - Siłownia — doświadczenie: <…>
-- Komunikacja: <krótko / z wyjaśnieniami> · tryb zapisu: <pytaj / wysyłaj> · horyzont: <1 / 2 tyg.>
+- Komunikacja: <krótko / z wyjaśnieniami> · tryb zapisu: <pytaj / wysyłaj> · horyzont: <1 / 2 tyg.> · jednostki: <km / mile>
 
 ================================================================
 PLIK: szablon-vault/AI Trener/Sezon.md

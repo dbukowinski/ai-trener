@@ -1,10 +1,12 @@
 # AI Trener 🏃‍♂️⛰️
 
+🇵🇱 Polski · 🇬🇧 [English version](README.en.md)
+
 **Osobisty trener biegowy w Twoim asystencie AI** — dla biegaczy górskich, trailowych, ultra i asfaltowych.
 
 Uruchamiasz instrukcję, AI przeprowadza ankietę, proponuje metodologię **szytą pod Ciebie** (Twój ulubiony trener albo sprawdzony moduł z paczki), zakłada Twój projekt treningowy z pamięcią opartą na dowodach (Pętla Wiedzy) i wysyła plany na zegarek.
 
-> Stan: **wersja testowa 0.1.0** (listopad 2026). Szukam testerów — zobacz [TESTOWANIE.md](TESTOWANIE.md).
+> Stan: **wersja testowa 0.2.0** (listopad 2026), po polsku i [po angielsku](README.en.md). Szukam testerów — zobacz [TESTOWANIE.md](TESTOWANIE.md).
 
 ## Co dostajesz
 
@@ -70,9 +72,10 @@ Szczegóły, adresy, konfiguracja w Claude, Claude Code i ChatGPT: [skill/ai-tre
 ## Struktura repozytorium
 
 ```
-START.md                     ← instrukcja dla AI (instalacja / praca)
+START.md / START.en.md       ← instrukcja dla AI (instalacja / praca), PL / EN
 AGENTS.md, CLAUDE.md         ← kontekst dla agentów (Codex, Claude Code)
-skill/ai-trener/             ← skill (to samo, co w ZIP)
+skill/ai-trener/             ← skill po polsku (to samo, co w ZIP)
+skill/ai-coach/              ← ten sam skill po angielsku (English edition)
   SKILL.md                   ← router i zasady trenera
   references/                ← instalacja, ankieta, dobór metodologii, planowanie, platformy, format treningu, Pętla Wiedzy, bezpieczeństwo
   metodologie/gory/          ← moduł górski (zasady, sesje, fazy, testy, siła, źródła)
@@ -81,9 +84,9 @@ skill/ai-trener/             ← skill (to samo, co w ZIP)
   szablon-vault/AI Trener/   ← szablon Twojego projektu (z Pętlą Wiedzy)
   narzedzia/vdot.py          ← VDOT i tempa z wyniku
   evals/scenariusze.md       ← scenariusze testowe
-chatgpt/                     ← instrukcje dla ChatGPT
-przyklady/                   ← przykładowe instalacje (osoby fikcyjne)
-dist/                        ← gotowe paczki: ZIP skilla, cały skill w jednym pliku
+chatgpt/                     ← instrukcje dla ChatGPT (PL i EN)
+przyklady/ · examples/       ← przykładowe instalacje (osoby fikcyjne), PL · EN
+dist/                        ← gotowe paczki: ZIP skilla, cały skill w jednym pliku (PL i EN)
 scripts/zbuduj-zip.sh        ← budowanie paczek z folderu skill/
 ```
 

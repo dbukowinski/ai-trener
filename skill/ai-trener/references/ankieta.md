@@ -75,6 +75,7 @@ Zasady prowadzenia:
 4. Jak mam komunikować plany: krótko (tabela) czy z wyjaśnieniami?
 5. Tryb zapisu na zegarek: `pytaj` (pokazuję plan, wysyłam po „ok”) czy `wysyłaj` (wysyłam i raportuję)?
 6. Horyzont planu: tydzień czy dwa tygodnie?
+7. Jednostki: kilometry czy mile?
 
 ## Po ankiecie
 

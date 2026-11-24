@@ -52,4 +52,4 @@ aktualizacja: <RRRR-MM-DD>
 - Ulubieni trenerzy / metody: <…>
 - Lubię: <…> · Nie lubię: <…>
 - Siłownia — doświadczenie: <…>
-- Komunikacja: <krótko / z wyjaśnieniami> · tryb zapisu: <pytaj / wysyłaj> · horyzont: <1 / 2 tyg.>
+- Komunikacja: <krótko / z wyjaśnieniami> · tryb zapisu: <pytaj / wysyłaj> · horyzont: <1 / 2 tyg.> · jednostki: <km / mile>
